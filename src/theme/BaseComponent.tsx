@@ -4,11 +4,15 @@ import { StyleSheet } from "./StyleSheet";
 import { parseStyleSheet } from "@skynexui/responsive_stylesheet";
 
 interface StyledBaseComponent {
-  stylesheet?: StyleSheet;
+  styleSheet?: StyleSheet;
 }
 
 const StyledBaseComponent = styled.div<StyledBaseComponent>`
-  ${({ stylesheet }) => parseStyleSheet(stylesheet)}
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-shrink: 0;
+  ${({ styleSheet }) => parseStyleSheet(styleSheet)}
 `;
 
 export const BaseComponent = (props) => {
@@ -16,5 +20,5 @@ export const BaseComponent = (props) => {
 };
 
 BaseComponent.defaultProps = {
-  stylesheet: {},
+  styleSheet: {},
 };
