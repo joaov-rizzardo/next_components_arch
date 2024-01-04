@@ -5,6 +5,7 @@ import Text from "@src/components/Text/Text";
 import Feed from "../patterns/Feed/Feed";
 import Footer from "../patterns/Footer/Footer";
 import { useTheme } from "@src/theme/ThemeProvider";
+import Link from "@src/components/Link/Link";
 
 export default function HomeScreen() {
   const theme = useTheme();
@@ -12,7 +13,7 @@ export default function HomeScreen() {
     <Box
       tag={"main"}
       styleSheet={{
-        backgroundColor: theme.colors.positive.x100,
+        backgroundColor: theme.colors.neutral.x000,
         flex: 1,
         alignItems: "center",
       }}
@@ -21,8 +22,8 @@ export default function HomeScreen() {
       <Menu />
       <Feed>
         <Feed.Header />
-        <Text variant="display1">Últimas atualizações</Text>
-        <Feed.Posts />
+        {/* <Text variant="display1">Últimas atualizações</Text>
+        <Feed.Posts /> */}
       </Feed>
       <Footer />
     </Box>
